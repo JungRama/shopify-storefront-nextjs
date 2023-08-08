@@ -1,8 +1,10 @@
 const domain = 'rahaykerj.myshopify.com'
 const storefrontAccessToken = 'b55ec0a49c62d9a599b2ba7a5820fef7'
 
+export const gql = String.raw
+
 export const ShopifyRequest = async <T>(query: T) => {
-	const URL = `https://${domain}/api/2023-10/graphql.json`
+	const URL = `https://${domain}/api/2023-07/graphql.json`
 
 	const options = {
 		endpoint: URL,
@@ -22,6 +24,8 @@ export const ShopifyRequest = async <T>(query: T) => {
 
 		return data
 	} catch (error) {
+		console.log('error: ' + error)
+
 		throw new Error('Products not fetched: ' + error)
 	}
 }

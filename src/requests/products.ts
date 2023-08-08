@@ -1,27 +1,42 @@
-import { ShopifyRequest } from '@/utils/shopify-request'
+import { ShopifyRequest, gql } from '@/utils/shopify-request'
 
 export async function getAllProducts() {
-	const query = `{
-    products(first: 250) {
-      edges {
-        node {
-          handle,
-          featuredImage {
-            url,
-            altText
-          },
-          priceRange {
-            minVariantPrice {
-              amount
-            }
-          },
-          title,
-          title,
-          id
-        }
-      }
-    }
-  }`
+	const query = gql`
+		{
+			products(first: 20) {
+				edges {
+					node {
+						title
+						id
+						handle
+						featuredImage {
+							url
+							altText
+						}
+						priceRange {
+							minVariantPrice {
+								amount
+							}
+						}
+						variants(first: 15) {
+							edges {
+								node {
+									id
+									title
+									price {
+										amount
+									}
+									compareAtPrice {
+										amount
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	`
 
 	const response = await ShopifyRequest(query)
 

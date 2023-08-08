@@ -2,6 +2,93 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://api.fontshare.com/v2/css?f[]=recia@700,500,400&f[]=zina@400&display=swap');
+/* Switzer */
+@font-face {
+	font-family: 'Switzer';
+	src:
+		url('//cdn.fontshare.com/wf/BLNB4FAQFNK56DWWNF7PMGTCOTZHOEII/ST3WKSSDMBK2MIQQO3MAVYWLF4FTOLFV/6IN5WOLRCYP4G4MOCOHOMXNON6Q7MDAR.woff2')
+			format('woff2'),
+		url('//cdn.fontshare.com/wf/BLNB4FAQFNK56DWWNF7PMGTCOTZHOEII/ST3WKSSDMBK2MIQQO3MAVYWLF4FTOLFV/6IN5WOLRCYP4G4MOCOHOMXNON6Q7MDAR.woff')
+			format('woff'),
+		url('//cdn.fontshare.com/wf/BLNB4FAQFNK56DWWNF7PMGTCOTZHOEII/ST3WKSSDMBK2MIQQO3MAVYWLF4FTOLFV/6IN5WOLRCYP4G4MOCOHOMXNON6Q7MDAR.ttf')
+			format('truetype');
+	font-weight: 400;
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Switzer';
+	src:
+		url('//cdn.fontshare.com/wf/OYB4CXKJQXKTNSLJMTDQOIVUL2V5EL7S/WYO2P7DQVV5RNXGMCUO2HL4RJP4VFUAS/6XPIMU23OJVRY676OG5YVJMWEHWICATX.woff2')
+			format('woff2'),
+		url('//cdn.fontshare.com/wf/OYB4CXKJQXKTNSLJMTDQOIVUL2V5EL7S/WYO2P7DQVV5RNXGMCUO2HL4RJP4VFUAS/6XPIMU23OJVRY676OG5YVJMWEHWICATX.woff')
+			format('woff'),
+		url('//cdn.fontshare.com/wf/OYB4CXKJQXKTNSLJMTDQOIVUL2V5EL7S/WYO2P7DQVV5RNXGMCUO2HL4RJP4VFUAS/6XPIMU23OJVRY676OG5YVJMWEHWICATX.ttf')
+			format('truetype');
+	font-weight: 500;
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Switzer';
+	src:
+		url('//cdn.fontshare.com/wf/HBNTRIISA5MEXGL5WPYI7CV2HIWTDV3Q/YDPDINVT673XLXNSTMLG4JNCZZMVVNPN/Y7SCNZJOT2MW5ADSGOFLDGH4TNL4JCQY.woff2')
+			format('woff2'),
+		url('//cdn.fontshare.com/wf/HBNTRIISA5MEXGL5WPYI7CV2HIWTDV3Q/YDPDINVT673XLXNSTMLG4JNCZZMVVNPN/Y7SCNZJOT2MW5ADSGOFLDGH4TNL4JCQY.woff')
+			format('woff'),
+		url('//cdn.fontshare.com/wf/HBNTRIISA5MEXGL5WPYI7CV2HIWTDV3Q/YDPDINVT673XLXNSTMLG4JNCZZMVVNPN/Y7SCNZJOT2MW5ADSGOFLDGH4TNL4JCQY.ttf')
+			format('truetype');
+	font-weight: 700;
+	font-display: swap;
+	font-style: normal;
+}
+
+/* Boska */
+@font-face {
+	font-family: 'Boska';
+	src:
+		url('//cdn.fontshare.com/wf/XWA5B7QYO35APXAF3YE3ZGLUEKXM5AUE/OM4E67LNKOMULZHKAOYI4D5ITKBZEHPB/2WOBSOJLL4JK7IHX3NLDIY3DAIT52O4K.woff2')
+			format('woff2'),
+		url('//cdn.fontshare.com/wf/XWA5B7QYO35APXAF3YE3ZGLUEKXM5AUE/OM4E67LNKOMULZHKAOYI4D5ITKBZEHPB/2WOBSOJLL4JK7IHX3NLDIY3DAIT52O4K.woff')
+			format('woff'),
+		url('//cdn.fontshare.com/wf/XWA5B7QYO35APXAF3YE3ZGLUEKXM5AUE/OM4E67LNKOMULZHKAOYI4D5ITKBZEHPB/2WOBSOJLL4JK7IHX3NLDIY3DAIT52O4K.ttf')
+			format('truetype');
+	font-weight: 400;
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Boska';
+	src:
+		url('//cdn.fontshare.com/wf/CNIAHX5RKVK53N3YCRZR5R3L3S4OTBSU/DBNFGKYNM3IIQU3Q4SC6XOOFS6UMAW7D/DCZMHDUIIND3BTWZGHAVWGQPO6EB5M4I.woff2')
+			format('woff2'),
+		url('//cdn.fontshare.com/wf/CNIAHX5RKVK53N3YCRZR5R3L3S4OTBSU/DBNFGKYNM3IIQU3Q4SC6XOOFS6UMAW7D/DCZMHDUIIND3BTWZGHAVWGQPO6EB5M4I.woff')
+			format('woff'),
+		url('//cdn.fontshare.com/wf/CNIAHX5RKVK53N3YCRZR5R3L3S4OTBSU/DBNFGKYNM3IIQU3Q4SC6XOOFS6UMAW7D/DCZMHDUIIND3BTWZGHAVWGQPO6EB5M4I.ttf')
+			format('truetype');
+	font-weight: 500;
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Boska';
+	src:
+		url('//cdn.fontshare.com/wf/XDSHNQOL6DH55YEQWSNM525DMPYUB5JR/GECNAC4UXYMIXSSO3FJ2FMV4QQ7E45P4/HKX3FF46MBT76S26FX57MMHX52HVGDK5.woff2')
+			format('woff2'),
+		url('//cdn.fontshare.com/wf/XDSHNQOL6DH55YEQWSNM525DMPYUB5JR/GECNAC4UXYMIXSSO3FJ2FMV4QQ7E45P4/HKX3FF46MBT76S26FX57MMHX52HVGDK5.woff')
+			format('woff'),
+		url('//cdn.fontshare.com/wf/XDSHNQOL6DH55YEQWSNM525DMPYUB5JR/GECNAC4UXYMIXSSO3FJ2FMV4QQ7E45P4/HKX3FF46MBT76S26FX57MMHX52HVGDK5.ttf')
+			format('truetype');
+	font-weight: 700;
+	font-display: swap;
+	font-style: normal;
+}
+
 :root {
 	--foreground-rgb: 0, 0, 0;
 	--background-start-rgb: 214, 219, 220;
@@ -14,4 +101,12 @@
 		--background-start-rgb: 0, 0, 0;
 		--background-end-rgb: 0, 0, 0;
 	}
+}
+
+body {
+	font-family: 'Switzer', sans-serif;
+}
+
+.font-secondary {
+	font-family: 'Boska', serif;
 }

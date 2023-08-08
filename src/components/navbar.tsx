@@ -1,18 +1,41 @@
+import { ShoppingBagIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link'
+
 export default function Navbar() {
 	return (
 		<div className="navbar">
-			<header className="text-gray-600 body-font">
-				<div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-					<a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-						<span className="text-xl">Logo</span>
-					</a>
-					<nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-						<a className="mr-5 hover:text-gray-900">Product</a>
-						<a className="mr-5 hover:text-gray-900">Collections</a>
-					</nav>
-					<button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-						My Cart (0)
-					</button>
+			<header className="body-font">
+				<div className="container mx-auto p-5">
+					<div className="grid grid-cols-12 md:gap-[15px] lg:gap[30px]">
+						<div className="col-span-12 md:col-span-4 lg:col-span-4">
+							<div className="flex items-center h-full">
+								<Link href="/" className="mr-5 text-sm hover:text-gray-900">
+									Home
+								</Link>
+								<Link href="/" className="mr-5 text-sm hover:text-gray-900">
+									Products
+								</Link>
+								<Link href="/" className="mr-5 text-sm hover:text-gray-900">
+									Collections
+								</Link>
+							</div>
+						</div>
+						<div className="col-span-12 md:col-span-4 lg:col-span-4 text-center">
+							<Link href="/">
+								<span className="text-3xl font-secondary font-black">
+									Sierna
+								</span>
+							</Link>
+						</div>
+						<div className="col-span-12 md:col-span-4 lg:col-span-4">
+							<div className="flex h-full items-center justify-end">
+								<div className="flex gap-1 p-2 cursor-pointer hover:bg-slate-50 rounded-sm transition-all">
+									<ShoppingBagIcon className="h-5 w-5"></ShoppingBagIcon>
+									Cart (5)
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</header>
 		</div>
