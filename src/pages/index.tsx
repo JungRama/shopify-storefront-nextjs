@@ -35,7 +35,7 @@ export default function IndexPage(props: PropsInterface) {
 
 			<div className="container mx-auto p-5">
 				<div className="grid grid-cols-12 md:gap-[15px] lg:gap-[40px]">
-					<div className="col-span-12 md:col-span-6 lg:col-span-6">
+					<div className="col-span-12 md:col-span-6 lg:col-span-6 hidden md:block">
 						<Image
 							src="/images/hero-1.png"
 							width={1000}
@@ -51,7 +51,7 @@ export default function IndexPage(props: PropsInterface) {
 
 							<div className="grid grid-cols-12 md:gap-[15px] lg:gap-[30px]">
 								<div className="col-span-12 md:col-span-8 lg:col-span-9">
-									<h2 className="text-4xl font-secondary font-bold upper leading-tight">
+									<h2 className="text-3xl md:text-5xl font-bold upper leading-tight">
 										Discover the most modest jewelry collection
 									</h2>
 									<p className="mt-5 opacity-80 leading-relaxed">
@@ -76,12 +76,12 @@ export default function IndexPage(props: PropsInterface) {
 
 			<div className="container mx-auto p-5">
 				<div className="grid grid-cols-12 md:gap-[15px] lg:gap-[40px]">
-					<div className="col-span-12 md:col-span-6 lg:col-span-7">
-						<h2 className="text-uppercase font-bold text-5xl font-general-sans leading-snug">
-							SHOP NOW AND GET <br /> 15% DISCOUNT
+					<div className="col-span-12 md:col-span-8 lg:col-span-7">
+						<h2 className="text-uppercase font-bold text-2xl md:text-5xl font-general-sans leading-snug">
+							SHOP NOW AND GET <br className="hidden lg:block" /> 15% DISCOUNT
 						</h2>
 					</div>
-					<div className="col-span-12 md:col-span-6 lg:col-span-5">
+					<div className="col-span-12 md:col-span-4 lg:col-span-5">
 						<div className="flex h-full items-center justify-end">
 							<ArrowDownIcon className="h-20"></ArrowDownIcon>
 						</div>

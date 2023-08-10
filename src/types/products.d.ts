@@ -1,32 +1,53 @@
 export interface ProductInterface {
 	id: string
 	handle: string
-	featuredImage: {
-		url: string
-		altText: any
-	}
-	priceRange: {
-		minVariantPrice: {
-			amount: string
-		}
+	descriptionHtml: string
+	featuredImage: featuredImage
+	priceRange: priceRange
+	images: {
+		edges: {
+			node: images
+		}[]
 	}
 	variants: {
 		edges: {
-			node: {
-				id: string
-				displayName: string
-				image: {
-					url: string
-				}
-				title: string
-				price: {
-					amount: string
-				}
-				compareAtPrice: {
-					amount: string
-				}
-			}
+			node: variants
 		}[]
 	}
 	title: string
+}
+
+export interface featuredImage {
+	url: string
+	altText: any
+}
+
+export interface priceRange {
+	maxVariantPrice: {
+		amount: string
+	}
+	minVariantPrice: {
+		amount: string
+	}
+}
+
+export interface images {
+	url: string
+	altText: any
+}
+
+export interface variants {
+	id: string
+	displayName: string
+	availableForSale: boolean
+	image: {
+		url: string
+	}
+	title: string
+	price: {
+		amount: string
+	}
+	compareAtPrice: {
+		amount: string
+	}
 }

@@ -11,10 +11,6 @@ interface PropsInterface {
 export default function ProductCard(props: PropsInterface) {
 	const productData = props.productData
 
-	const addItemToCart = () => {
-		addToCart(productData.variants.edges[0].node.id, 1)
-	}
-
 	const showMinPrice = productData.variants.edges.reduce(
 		(minVariant, currentVariant) => {
 			const currentPrice = parseFloat(currentVariant.node.price.amount)
@@ -26,7 +22,7 @@ export default function ProductCard(props: PropsInterface) {
 
 	return (
 		<Link href={`/product/${productData.handle}`}>
-			<div className="w-full border rounded-md">
+			<div className="w-full border hover:shadow-lg rounded-md">
 				<picture>
 					<img
 						className="object-cover aspect-square"

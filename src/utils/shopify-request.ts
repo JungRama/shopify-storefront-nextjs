@@ -3,18 +3,19 @@ const storefrontAccessToken = 'b55ec0a49c62d9a599b2ba7a5820fef7'
 
 export const gql = String.raw
 
-export const ShopifyRequest = async <T>(query: T) => {
+export const ShopifyRequest = async <T>(query: T, variables?: T) => {
 	const URL = `https://${domain}/api/2023-07/graphql.json`
 
 	const options = {
-		endpoint: URL,
 		method: 'POST',
 		headers: {
-			'X-Shopify-Storefront-Access-Token': storefrontAccessToken,
-			Accept: 'application/json',
 			'Content-Type': 'application/json',
+			'X-Shopify-Storefront-Access-Token': 'b55ec0a49c62d9a599b2ba7a5820fef7',
 		},
-		body: JSON.stringify({ query }),
+		body: JSON.stringify({
+			query,
+			variables,
+		}),
 	}
 
 	try {
