@@ -21,8 +21,8 @@ export default function ProductCard(props: PropsInterface) {
 	)
 
 	return (
-		<Link href={`/product/${productData.handle}`}>
-			<div className="w-full border hover:shadow-lg rounded-md">
+		<Link href={`/product/${productData.handle}`} className="block h-full">
+			<div className="w-full border hover:shadow-lg rounded-md h-full">
 				<picture>
 					<img
 						className="object-cover aspect-square"
@@ -31,8 +31,8 @@ export default function ProductCard(props: PropsInterface) {
 					/>
 				</picture>
 
-				<div className="mx-4 my-4">
-					<h3 className="mt-4 mb-2 text-lg font-bold">{productData.title}</h3>
+				<div className="flex flex-col mx-4 my-4">
+					<h3 className="mb-2 text-lg font-bold">{productData.title}</h3>
 
 					<div className="flex justify-between">
 						<div>

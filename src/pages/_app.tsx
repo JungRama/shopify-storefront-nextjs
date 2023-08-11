@@ -2,6 +2,7 @@ import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import { useEffect } from 'react'
 import CartState from '@/store/cart'
+import Head from 'next/head'
 
 export default function App({ Component, pageProps }: AppProps) {
 	useEffect(() => {
@@ -13,5 +14,19 @@ export default function App({ Component, pageProps }: AppProps) {
 		}
 	}, [])
 
-	return <Component {...pageProps} />
+	return (
+		<>
+			<Head>
+				<title>The Modest - Discover Jewelry</title>
+				<link rel="icon" href="/favicon.png" />
+				<meta property="og:image" content="/og-image.png" />
+				<meta
+					name="description"
+					content="Each piece within the Discover Modest Jewelry Collection is meticulously crafted to capture the essence of grace and refinement."
+				/>
+			</Head>
+
+			<Component {...pageProps} />
+		</>
+	)
 }

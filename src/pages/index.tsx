@@ -7,6 +7,7 @@ import ProductCard from '@/components/products/card'
 import Image from 'next/image'
 import { ArrowDownIcon } from '@heroicons/react/24/outline'
 import { useEffect } from 'react'
+import Head from 'next/head'
 
 interface PropsInterface {
 	products: {
@@ -31,6 +32,14 @@ export default function IndexPage(props: PropsInterface) {
 
 	return (
 		<>
+			<Head>
+				<title>The Modest - Discover Jewelry</title>
+				<meta
+					name="description"
+					content="Each piece within the Discover Modest Jewelry Collection is meticulously crafted to capture the essence of grace and refinement."
+				/>
+			</Head>
+
 			<Navbar></Navbar>
 
 			<div className="container mx-auto p-5">

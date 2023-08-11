@@ -15,11 +15,17 @@ export default function Navbar() {
 								<Link href="/" className="mr-5 text-sm hover:text-gray-900">
 									Home
 								</Link>
-								<Link href="/" className="mr-5 text-sm hover:text-gray-900">
-									Products
+								<Link
+									href="/product"
+									className="mr-5 text-sm hover:text-gray-900"
+								>
+									Product
 								</Link>
-								<Link href="/" className="mr-5 text-sm hover:text-gray-900">
-									Collections
+								<Link
+									href="/collection"
+									className="mr-5 text-sm hover:text-gray-900"
+								>
+									Collection
 								</Link>
 							</div>
 						</div>
@@ -48,10 +54,16 @@ export default function Navbar() {
 								<Link href="/" className="mr-5 text-sm hover:text-gray-900">
 									Home
 								</Link>
-								<Link href="/" className="mr-5 text-sm hover:text-gray-900">
+								<Link
+									href="/product"
+									className="mr-5 text-sm hover:text-gray-900"
+								>
 									Products
 								</Link>
-								<Link href="/" className="mr-5 text-sm hover:text-gray-900">
+								<Link
+									href="/ collection"
+									className="mr-5 text-sm hover:text-gray-900"
+								>
 									Collections
 								</Link>
 							</div>

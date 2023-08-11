@@ -45,6 +45,111 @@ export async function getAllProducts() {
 	return data
 }
 
+export async function getProductWithFilter(
+	productType: string[],
+	productTag: string[],
+) {
+	const query = gql`
+		query VariantOptions($filters: [ProductFilter!]) {
+			collection(handle: "all-product") {
+				products(first: 10, filters: $filters) {
+					edges {
+						node {
+							title
+							id
+							handle
+							featuredImage {
+								url
+								altText
+							}
+							priceRange {
+								minVariantPrice {
+									amount
+								}
+							}
+							variants(first: 15) {
+								edges {
+									node {
+										id
+										title
+										price {
+											amount
+										}
+										compareAtPrice {
+											amount
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	`
+
+	const filters = [
+		...productType.map((item) => {
+			return { productType: item }
+		}),
+		...productTag.map((item) => {
+			return { tag: item }
+		}),
+	]
+
+	const variables: any = {
+		filters,
+	}
+
+	const response = await ShopifyRequest(query, variables)
+
+	const data = response.data.collection.products.edges
+		? response.data.collection.products.edges
+		: []
+
+	return data
+}
+
+export async function getProductType() {
+	const query = gql`
+		{
+			productTypes(first: 50) {
+				edges {
+					node
+				}
+			}
+		}
+	`
+
+	const response = await ShopifyRequest(query)
+
+	const data = response.data.productTypes.edges
+		? response.data.productTypes.edges
+		: []
+
+	return data
+}
+
+export async function getProductTags() {
+	const query = gql`
+		{
+			productTags(first: 50) {
+				edges {
+					node
+				}
+			}
+		}
+	`
+
+	const response = await ShopifyRequest(query)
+
+	const data = response.data.productTags.edges
+		? response.data.productTags.edges
+		: []
+
+	return data
+}
+
 export async function getProductByHandle(handle: string) {
 	const query = gql`
 		{

@@ -10,6 +10,7 @@ import parse from 'html-react-parser'
 import SwiperImageProduct from '@/components/products/swiper-image-product'
 import SelectVariant from '@/components/products/select-variant'
 import { addToCart } from '@/requests/checkout'
+import Head from 'next/head'
 
 interface PropsInterface {
 	productDetail: ProductInterface
@@ -40,6 +41,14 @@ export default function Example(props: PropsInterface) {
 
 	return (
 		<div>
+			<Head>
+				<title>{productDetail.title} - The Modest</title>
+				<meta
+					name="description"
+					content="Each piece within the Discover Modest Jewelry Collection is meticulously crafted to capture the essence of grace and refinement."
+				/>
+			</Head>
+
 			<Navbar></Navbar>
 
 			<div className="container mx-auto p-5">
