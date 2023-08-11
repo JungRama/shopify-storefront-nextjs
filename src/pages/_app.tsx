@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import { useEffect } from 'react'
 import CartState from '@/store/cart'
 import Head from 'next/head'
+import { Analytics } from '@vercel/analytics/react'
 
 export default function App({ Component, pageProps }: AppProps) {
 	useEffect(() => {
@@ -27,6 +28,8 @@ export default function App({ Component, pageProps }: AppProps) {
 			</Head>
 
 			<Component {...pageProps} />
+
+			<Analytics />
 		</>
 	)
 }
