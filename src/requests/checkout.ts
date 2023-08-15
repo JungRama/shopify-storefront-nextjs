@@ -2,83 +2,6 @@ import CartState from '@/store/cart'
 import { variants } from '@/types/products'
 import { ShopifyRequest, gql } from '@/utils/shopify-request'
 
-export async function createCart(id: string, quantity: number) {
-	const query = gql`
-    mutation {
-      checkoutCreate(
-        input: {
-          lineItems: [
-            { 
-              variantId: "${id}", 
-              quantity: ${quantity}}
-          ]
-        }
-      )
-      {
-        checkout {
-          id
-          webUrl
-          
-        }
-      }
-    }`
-
-	const response = await ShopifyRequest(query)
-
-	const checkout = response.data.checkoutCreate.checkout
-		? response.data.checkoutCreate.checkout
-		: []
-
-	return checkout
-}
-
-export async function addNewItemToCart(id: string, quantity: number) {
-	const checkoutId = localStorage.getItem('checkout_id')
-
-	const query = gql`
-    mutation {
-      checkoutLineItemsAdd(
-        lineItems: [
-          { 
-            variantId: "${id}", 
-            quantity: ${quantity}
-          }
-        ]
-        checkoutId: "${checkoutId}"
-      )
-      {
-        checkout {
-          id
-          webUrl
-        }
-      }
-    }`
-
-	const response = await ShopifyRequest(query)
-
-	const checkout = response.data.checkoutLineItemsAdd.checkout
-		? response.data.checkoutLineItemsAdd.checkout
-		: []
-
-	return checkout
-}
-
-export async function checkoutWithDiscount() {
-	const query2 = gql`
-		mutation {
-			checkoutDiscountCodeApplyV2(
-				checkoutId: "gid://shopify/Checkout/cac411fcc395755082f6e65a1e5791c7?key=4884cdc611da672331aa56e5ac1864cc"
-				discountCode: "JEK3ECYX8HBJ"
-			) {
-				checkout {
-					id
-					webUrl
-				}
-			}
-		}
-	`
-}
-
 export async function checkoutCart() {
 	const items = CartState.cartItem.map((item) => {
 		return {
@@ -104,7 +27,7 @@ export async function checkoutCart() {
 
 	const response = await ShopifyRequest(query, variable)
 
-	window.location.href = response.data.checkoutCreate.checkout.webUrl
+	return response.data.checkoutCreate.checkout.webUrl
 }
 
 export async function addToCart(

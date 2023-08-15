@@ -1,5 +1,6 @@
-const domain = 'rahaykerj.myshopify.com'
-const storefrontAccessToken = 'b55ec0a49c62d9a599b2ba7a5820fef7'
+const domain = process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN
+const storefrontAccessToken =
+	process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESSTOKEN
 
 export const gql = String.raw
 
@@ -10,7 +11,8 @@ export const ShopifyRequest = async <T>(query: T, variables?: T) => {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
-			'X-Shopify-Storefront-Access-Token': 'b55ec0a49c62d9a599b2ba7a5820fef7',
+			'X-Shopify-Storefront-Access-Token':
+				(storefrontAccessToken as string) ?? '',
 		},
 		body: JSON.stringify({
 			query,
@@ -26,7 +28,6 @@ export const ShopifyRequest = async <T>(query: T, variables?: T) => {
 		return data
 	} catch (error) {
 		console.log('error: ' + error)
-
-		throw new Error('Products not fetched: ' + error)
+		throw new Error('Error: ' + error)
 	}
 }

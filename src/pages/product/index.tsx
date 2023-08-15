@@ -16,7 +16,7 @@ import { useRouter } from 'next/router'
 import SkeletonProduct from '@/components/products/skeleton'
 import Head from 'next/head'
 
-interface PropsInterface {
+export interface PropsInterface {
 	products: {
 		node: ProductInterface
 	}[]
@@ -44,7 +44,7 @@ export const getServerSideProps: GetServerSideProps<
 	}
 }
 
-export default function IndexPage(props: PropsInterface) {
+export default function ProductPage(props: PropsInterface) {
 	const router = useRouter()
 
 	const [loading, setLoading] = useState<boolean>(true)
@@ -52,6 +52,8 @@ export default function IndexPage(props: PropsInterface) {
 	const [productTypeSelect, setProductTypeSelect] = useState<string[]>([])
 	const [productTagSelect, setProductTagSelect] = useState<string[]>([])
 	const [filteredProduct, setFilteredProduct] = useState(props.products)
+
+	const [kontol, setKontol] = useState(false)
 
 	const handleCheckboxChange = (
 		value: string,
@@ -66,7 +68,7 @@ export default function IndexPage(props: PropsInterface) {
 	}
 
 	useEffect(() => {
-		if (router.query.tag) {
+		if (router.query?.tag) {
 			if (Array.isArray(router.query.tag)) {
 				setProductTagSelect(router.query.tag as string[])
 			} else {

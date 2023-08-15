@@ -32,7 +32,7 @@ export const getServerSideProps: GetServerSideProps<PropsInterface> = async (
 	}
 }
 
-export default function Example(props: PropsInterface) {
+export default function SlugProduct(props: PropsInterface) {
 	const productDetail = props.productDetail
 
 	const [selectedVariant, setSelectedVariant] = useState<{

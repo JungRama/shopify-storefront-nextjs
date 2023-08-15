@@ -1,0 +1,8 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"module": "es2015" // Set to es2015 or later
+		// Other compiler options for Cypress
+	}
+	// Include any additional options you need
+}
