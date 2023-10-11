@@ -1,10 +1,16 @@
 # NEXTJS SHOPIFY INTEGRATION WITH GRAPHQL
 
-![enter image description here](./public/demo.gif)
+![Cover](./public/git/cover.png)
 
 This repository contain functional eCommerce that integrate with shopify using Next.js + Tailwind + Graphql. Here we are using Shopify Storefront API to interact with the data. See [Live Demo Here](https://themodest-shopify-nextjs.vercel.app/).
 
-##### Techstack
+## Screenshot
+
+![screenshoot-1](./public/git/screenshoot-1.png)
+![screenshoot-2](./public/git/screenshoot-2.png)
+![screenshoot-3](./public/git/screenshoot-3.png)
+
+## Techstack
 
 - Next.js
 - Typescript
@@ -12,13 +18,13 @@ This repository contain functional eCommerce that integrate with shopify using N
 - Cypress
 - Jest
 
-##### On Going Feature Integration
+## On Going Feature Integration
 
 - Get product review from judge.me
 - Add discount input before checkout
 - Pagination on page products
 
-##### How To Run The Project
+## How To Run The Project
 
 1. Clone the project
    $ git clone https://github.com/JungRama/shopify-storefront-nextjs.git
